@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/O3PL_MERP_ONL_0001_Request" xmlns:tns="http://www.example.org/O3PL_MERP_ONL_0001_Request" elementFormDefault="qualified">
+	<element name="element">
+		<complexType>
+			<sequence>
+				<element name="REQUEST">
+					<complexType>
+						<sequence>
+							<element name="wareHouseLCode" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="brandCode" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="typeCode" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="returnDate" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="companySLCode" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="orderNumber1" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="orderNumber2" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="productCode" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="seasonCode" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="styleCode" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="colorCode" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="sizeCode" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="normalQty" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="productStateCode" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="slipNumber" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="returnMemo" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="badQty" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="rtKey" type="string" minOccurs="1" maxOccurs="1"></element>
+						</sequence>
+					</complexType>
+				</element>
+			</sequence>
+		</complexType>
+	</element>
+</schema>

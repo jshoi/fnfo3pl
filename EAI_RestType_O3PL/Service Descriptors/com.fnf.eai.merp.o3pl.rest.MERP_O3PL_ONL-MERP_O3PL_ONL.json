@@ -1,0 +1,40 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "MERP_O3PL_ONL",
+    "description" : "MERP_O3PL_ONL service"
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/o3pl/stockMove3PL" : {
+      "post" : {
+        "summary" : "postMERP_O3PL_ONL",
+        "description" : "postMERP_O3PL_ONL",
+        "operationId" : "post-stockMove3PL",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : { }
+}

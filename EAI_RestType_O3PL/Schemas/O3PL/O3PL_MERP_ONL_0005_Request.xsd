@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/O3PL_MERP_ONL_0005_Request" xmlns:tns="http://www.example.org/O3PL_MERP_ONL_0005_Request" elementFormDefault="qualified">
+	<element name="element">
+		<complexType>
+			<sequence>
+				<element name="REQUEST_LIST" minOccurs="1"
+								maxOccurs="unbounded">
+					<complexType>
+						<sequence>
+							<element name="TP_GUBUN" type="string"
+								minOccurs="1" maxOccurs="1">
+							</element>
+							<element name="CD_COMPANY" type="string"
+								minOccurs="1" maxOccurs="1">
+							</element>
+							<element name="CD_SUBBILL" type="string"
+								minOccurs="1" maxOccurs="1">
+							</element>
+							<element name="TP_HISTORY" type="string"
+								minOccurs="1" maxOccurs="1">
+							</element>
+							<element name="CD_REGISTER" type="string"
+								minOccurs="1" maxOccurs="1">
+							</element>
+							<element name="LIST_DETAILS" minOccurs="1" maxOccurs="unbounded">
+								<complexType>
+								<sequence>
+									<element name="DT_DATE" type="string"
+										minOccurs="1" maxOccurs="1">
+									</element>
+									<element name="CD_BILL" type="string"
+										minOccurs="1" maxOccurs="1">
+									</element>
+									<element name="CD_DEPART" type="string"
+										minOccurs="1" maxOccurs="1">
+									</element>
+									<element name="CD_SHOP" type="string"
+										minOccurs="1" maxOccurs="1">
+									</element>
+									<element name="CD_RFIDUID" type="string"
+										minOccurs="1" maxOccurs="1">
+									</element>
+								</sequence>
+								</complexType>
+							</element>
+						</sequence>
+					</complexType>
+				</element>
+			</sequence>
+		</complexType>
+	</element>
+</schema>

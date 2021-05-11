@@ -1,0 +1,144 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "O3PL_OBO_ONLINE",
+    "description" : "O3PL_OBO_ONLINE service"
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/o3pl/stockInfoOnline" : {
+      "post" : {
+        "summary" : "postO3PL_OBO_ONLINE",
+        "description" : "postO3PL_OBO_ONLINE",
+        "operationId" : "post-stockInfoOnline",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/o3pl/returnTrackingInfoOnline" : {
+      "post" : {
+        "summary" : "postO3PL_OBO_ONLINE",
+        "description" : "postO3PL_OBO_ONLINE",
+        "operationId" : "post-returnTrackingInfoOnline",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/o3pl/inboundDoneOnline" : {
+      "post" : {
+        "summary" : "postO3PL_OBO_ONLINE",
+        "description" : "postO3PL_OBO_ONLINE",
+        "operationId" : "post-inboundDoneOnline",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/o3pl/outboundDoneOnline" : {
+      "post" : {
+        "summary" : "postO3PL_OBO_ONLINE",
+        "description" : "postO3PL_OBO_ONLINE",
+        "operationId" : "post-outboundDoneOnline",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/o3pl/deliveryDoneOnline" : {
+      "post" : {
+        "summary" : "postO3PL_OBO_ONLINE",
+        "description" : "postO3PL_OBO_ONLINE",
+        "operationId" : "post-deliveryDoneOnline",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : { }
+}

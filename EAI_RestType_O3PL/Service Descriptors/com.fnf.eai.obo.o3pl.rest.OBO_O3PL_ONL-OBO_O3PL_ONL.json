@@ -1,0 +1,118 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "OBO_O3PL_ONL",
+    "description" : "OBO_O3PL_ONL service"
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/o3pl/cancelOutboundOnline" : {
+      "post" : {
+        "summary" : "postOBO_O3PL_ONL",
+        "description" : "postOBO_O3PL_ONL",
+        "operationId" : "post-cancelOutboundOnline",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/o3pl/makeOutboundOnline" : {
+      "post" : {
+        "summary" : "postOBO_O3PL_ONL",
+        "description" : "postOBO_O3PL_ONL",
+        "operationId" : "post-makeOutboundOnline",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/o3pl/makeReturnOnline" : {
+      "post" : {
+        "summary" : "postOBO_O3PL_ONL",
+        "description" : "postOBO_O3PL_ONL",
+        "operationId" : "post-makeReturnOnline",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/o3pl/changeReceiverAddressOnline" : {
+      "post" : {
+        "summary" : "postOBO_O3PL_ONL",
+        "description" : "postOBO_O3PL_ONL",
+        "operationId" : "post-changeReceiverAddressOnline",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : { }
+}

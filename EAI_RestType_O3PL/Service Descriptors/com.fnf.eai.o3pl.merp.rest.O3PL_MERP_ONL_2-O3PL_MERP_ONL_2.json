@@ -1,0 +1,40 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "O3PL_MERP_ONL_2",
+    "description" : "O3PL_MERP_ONL_2 service"
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/stockInfoSabangnet" : {
+      "post" : {
+        "summary" : "postO3PL_MERP_ONL_2",
+        "description" : "postO3PL_MERP_ONL_2",
+        "operationId" : "post-stockInfoSabangnet",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : { }
+}

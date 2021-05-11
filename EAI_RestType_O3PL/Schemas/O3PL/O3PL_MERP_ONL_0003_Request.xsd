@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/O3PL_MERP_ONL_0003_Request" xmlns:tns="http://www.example.org/O3PL_MERP_ONL_0003_Request" elementFormDefault="qualified">
+	<element name="element">
+		<complexType>
+			<sequence>
+				<element name="REQUEST_LIST" minOccurs="1"
+								maxOccurs="unbounded">
+					<complexType>
+						<sequence>
+							<element name="BRAND" type="string"
+								minOccurs="1" maxOccurs="1">
+							</element>
+							<element name="SHOPCODE" type="string"
+								minOccurs="1" maxOccurs="1">
+							</element>
+							<element name="SEASON" type="string"
+								minOccurs="1" maxOccurs="1">
+							</element>
+							<element name="PARTCODE" type="string"
+								minOccurs="1" maxOccurs="1">
+							</element>
+							<element name="COLOR" type="string"
+								minOccurs="1" maxOccurs="1">
+							</element>
+							<element name="SIZ" type="string"
+								minOccurs="1" maxOccurs="1">
+							</element>
+							<element name="Y_QTY" type="integer"
+								minOccurs="1" maxOccurs="1">
+							</element>
+							<element name="QTY" type="integer"
+								minOccurs="1" maxOccurs="1">
+							</element>
+						</sequence>
+					</complexType>
+				</element>
+			</sequence>
+		</complexType>
+	</element>
+</schema>

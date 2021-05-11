@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/O3PL_MERP_ONL_0005_Response" xmlns:tns="http://www.example.org/O3PL_MERP_ONL_0005_Response" elementFormDefault="qualified">
+   <element name="element">
+        <complexType>
+    <sequence>
+      <element maxOccurs="1" minOccurs="1" name="RESPONSE_CD" type="string"/>
+      <element maxOccurs="1" minOccurs="1" name="RESPONSE_MSG" type="string"/>
+      <element maxOccurs="unbounded" minOccurs="0" name="RESPONSE_DATA" nillable="true">
+        <complexType>
+          <sequence>
+          	<element maxOccurs="1" minOccurs="1" type="string" nillable="true" name="resultCode" />
+          	<element maxOccurs="1" minOccurs="1" type="string" nillable="true" name="resultMessage" />
+          	<element maxOccurs="1" minOccurs="1" type="string" nillable="true" name="CD_BILL" />
+          	<element maxOccurs="1" minOccurs="1" type="string" nillable="true" name="CD_SUBBILL" />
+          	<element maxOccurs="1" minOccurs="1" type="string" nillable="true" name="FAIL_RFIDUID" />
+          </sequence>
+        </complexType>
+      </element>
+    </sequence>
+        </complexType>
+    </element>
+
+   <element name="RESPONSE_DATA" nillable="true">
+   	<complexType>
+   		<sequence>
+          	<element maxOccurs="1" minOccurs="1" type="string" nillable="true" name="resultCode" />
+          	<element maxOccurs="1" minOccurs="1" type="string" nillable="true" name="resultMessage" />
+          	<element maxOccurs="1" minOccurs="1" type="string" nillable="true" name="CD_BILL" />
+          	<element maxOccurs="1" minOccurs="1" type="string" nillable="true" name="CD_SUBBILL" />
+          	<element maxOccurs="1" minOccurs="1" type="string" nillable="true" name="FAIL_RFIDUID" />
+   		</sequence>
+   	</complexType>
+   </element>
+</schema>

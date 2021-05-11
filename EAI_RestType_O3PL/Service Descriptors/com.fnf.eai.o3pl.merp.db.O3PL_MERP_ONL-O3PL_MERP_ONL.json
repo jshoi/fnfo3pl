@@ -1,0 +1,144 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "O3PL_MERP_ONL",
+    "description" : "O3PL_MERP_ONL service"
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/o3pl/getWmsOutRFID" : {
+      "post" : {
+        "summary" : "postO3PL_MERP_ONL",
+        "description" : "postO3PL_MERP_ONL",
+        "operationId" : "post-getWmsOutRFID",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/o3pl/getRFID" : {
+      "post" : {
+        "summary" : "postO3PL_MERP_ONL",
+        "description" : "postO3PL_MERP_ONL",
+        "operationId" : "post-getRFID",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/o3pl/checkRFID" : {
+      "post" : {
+        "summary" : "postO3PL_MERP_ONL",
+        "description" : "postO3PL_MERP_ONL",
+        "operationId" : "post-checkRFID",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/o3pl/outboundDoneInside" : {
+      "post" : {
+        "summary" : "postO3PL_MERP_ONL",
+        "description" : "postO3PL_MERP_ONL",
+        "operationId" : "post-outboundDoneInside",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/o3pl/stockInfoSabangnet" : {
+      "post" : {
+        "summary" : "postO3PL_MERP_ONL",
+        "description" : "postO3PL_MERP_ONL",
+        "operationId" : "post-stockInfoSabangnet",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : { }
+}

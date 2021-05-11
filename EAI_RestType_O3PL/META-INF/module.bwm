@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:property="http://ns.tibco.com/bw/property" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_VqC_IGXqEeuhFpGsQLsBaA" targetNamespace="http://tns.tibco.com/bw/composite/EAI_RestType_O3PL" name="EAI_RestType_O3PL" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_LSyMkG__EeuTIrd96tX6Vg" name="o3pl-healthcheck" promote="Componenthealthcheck/o3pl-healthcheck">
+    <sca:interface.wsdl xmi:id="_LS2eAG__EeuTIrd96tX6Vg" interface="http://xmlns.example.com/20210216113212PLT#wsdl.interface(healthcheck)" scaext:wsdlLocation="../Processes/com/fnf/eai/common/healthcheck.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_LS9ywG__EeuTIrd96tX6Vg" name="RestService30" path="/o3pl/healthcheck" docBasePath="http://localhost:7777/EAI_RestType_O3PL" docResourcePath="healthcheck" basePath="/" connector="com.fnf.eai.resources.http.server.eai.HTTPConnectorResource" structuredData="true" technologyVersion="2.0">
+      <operation xmi:id="_LS-Z0G__EeuTIrd96tX6Vg" operationName="get" nickname="healthcheck" httpMethod="GET" notes="Healthcheck" responseStyle="element" outputPartName="item">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <operation xmi:id="_aT1NoJeCEeux5rX4TEQ_ZQ" operationName="post" nickname="post-healthcheck" httpMethod="POST" notes="postHealthcheck" responseStyle="element">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <advancedConfig xmi:id="_LS9ywW__EeuTIrd96tX6Vg" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_LS-Z0W__EeuTIrd96tX6Vg" bindingName="RestService30"/>
+  </sca:service>
+  <sca:service xmi:id="_zKG-IpBEEeuKnK9Z6LFaEQ" name="o3pl-makeOutboundOnline" promote="ComponentOBO_O3PL_ONL/o3pl-makeOutboundOnline">
+    <sca:interface.wsdl xmi:id="_zKHlMJBEEeuKnK9Z6LFaEQ" interface="http://xmlns.example.com/20210329131112PLT#wsdl.interface(makeOutboundOnline)" scaext:wsdlLocation="../Processes/com/fnf/eai/obo/o3pl/rest/OBO_O3PL_ONL.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_zKKogJBEEeuKnK9Z6LFaEQ" name="RestService104" path="/o3pl/makeOutboundOnline" docBasePath="http://localhost:7777/EAI_RestType_O3PL" docResourcePath="OBO_O3PL_ONL" basePath="/" connector="com.fnf.eai.resources.http.server.eai.HTTPConnectorResource" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/com.fnf.eai.obo.o3pl.rest.OBO_O3PL_ONL-OBO_O3PL_ONL.json" policySets="com.fnf.eai.resources.policy.BasicAuthentication" scaext:policySetLocations="BWRestHttpServiceBinding">
+      <operation xmi:id="_zLh6cJBEEeuKnK9Z6LFaEQ" operationName="post" nickname="post-makeOutboundOnline" httpMethod="POST" notes="postOBO_O3PL_ONL" responseStyle="element" outputPartName="item">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <advancedConfig xmi:id="_zKKogZBEEeuKnK9Z6LFaEQ" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_zLh6cZBEEeuKnK9Z6LFaEQ" bindingName="RestService104"/>
+  </sca:service>
+  <sca:service xmi:id="_ZUHbEpBFEeuKnK9Z6LFaEQ" name="o3pl-getWmsOutRFID" promote="ComponentO3PL_MERP_ONL/o3pl-getWmsOutRFID">
+    <sca:interface.wsdl xmi:id="_ZUHbFpBFEeuKnK9Z6LFaEQ" interface="http://xmlns.example.com/20210329131528PLT#wsdl.interface(getWmsOutRFID)" scaext:wsdlLocation="../Processes/com/fnf/eai/o3pl/merp/db/O3PL_MERP_ONL.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_ZULFcJBFEeuKnK9Z6LFaEQ" name="RestService103" path="/o3pl/getWmsOutRFID" docBasePath="http://localhost:7777/EAI_RestType_O3PL" docResourcePath="O3PL_MERP_ONL" basePath="/" connector="com.fnf.eai.resources.http.server.eai.HTTPConnectorResource" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/com.fnf.eai.o3pl.merp.db.O3PL_MERP_ONL-O3PL_MERP_ONL.json" policySets="com.fnf.eai.resources.policy.BasicAuthentication" scaext:policySetLocations="BWRestHttpServiceBinding">
+      <operation xmi:id="_ZVlasJBFEeuKnK9Z6LFaEQ" operationName="post" nickname="post-getWmsOutRFID" httpMethod="POST" notes="postO3PL_MERP_ONL" responseStyle="element" outputPartName="item">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <advancedConfig xmi:id="_ZULFcZBFEeuKnK9Z6LFaEQ" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_ZVlasZBFEeuKnK9Z6LFaEQ" bindingName="RestService103"/>
+  </sca:service>
+  <sca:service xmi:id="_oigkoJG1EeuezMB71T3MKg" name="o3pl-outboundDoneOnline" promote="ComponentO3PL_OBO_ONLINE/o3pl-outboundDoneOnline">
+    <sca:interface.wsdl xmi:id="_ojYHUJG1EeuezMB71T3MKg" interface="http://xmlns.example.com/20210331091125PLT#wsdl.interface(outboundDoneOnline)" scaext:wsdlLocation="../Processes/com/fnf/eai/o3pl/obo/rest/O3PL_OBO_ONLINE.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_ojpNEJG1EeuezMB71T3MKg" name="RestService113" path="/o3pl/outboundDoneOnline" docBasePath="http://localhost:7777/EAI_RestType_O3PL" docResourcePath="O3PL_OBO_ONLINE" basePath="/" connector="com.fnf.eai.resources.http.server.eai.HTTPConnectorResource" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/com.fnf.eai.o3pl.obo.rest.O3PL_OBO_ONLINE-O3PL_OBO_ONLINE.json" policySets="com.fnf.eai.resources.policy.BasicAuthentication" scaext:policySetLocations="BWRestHttpServiceBinding">
+      <operation xmi:id="_olzJMJG1EeuezMB71T3MKg" operationName="post" nickname="post-outboundDoneOnline" httpMethod="POST" notes="postO3PL_OBO_ONLINE" responseStyle="element" outputPartName="item">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <advancedConfig xmi:id="_ojpNEZG1EeuezMB71T3MKg" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_olzJMZG1EeuezMB71T3MKg" bindingName="RestService113"/>
+  </sca:service>
+  <sca:service xmi:id="_y9JTUpG8EeuRV-P2JIdBvg" name="o3pl-outboundDoneInside" promote="ComponentO3PL_MERP_ONL/o3pl-outboundDoneInside">
+    <sca:interface.wsdl xmi:id="_y9TEUpG8EeuRV-P2JIdBvg" interface="http://xmlns.example.com/20210329131528PLT#wsdl.interface(outboundDoneInside)" scaext:wsdlLocation="../Processes/com/fnf/eai/o3pl/merp/db/O3PL_MERP_ONL.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_y9WusJG8EeuRV-P2JIdBvg" name="RestService114" path="/o3pl/outboundDoneInside" docBasePath="http://localhost:7777/EAI_RestType_O3PL" docResourcePath="O3PL_MERP_ONL" basePath="/" connector="com.fnf.eai.resources.http.server.eai.HTTPConnectorResource" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/com.fnf.eai.o3pl.merp.db.O3PL_MERP_ONL-O3PL_MERP_ONL.json" policySets="com.fnf.eai.resources.policy.BasicAuthentication" scaext:policySetLocations="BWRestHttpServiceBinding">
+      <operation xmi:id="_y-_GYJG8EeuRV-P2JIdBvg" operationName="post" nickname="post-outboundDoneInside" httpMethod="POST" notes="postO3PL_MERP_ONL" responseStyle="element" outputPartName="item">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <advancedConfig xmi:id="_y9WusZG8EeuRV-P2JIdBvg" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_y-_GYZG8EeuRV-P2JIdBvg" bindingName="RestService114"/>
+  </sca:service>
+  <sca:service xmi:id="_3YTQApG8EeuRV-P2JIdBvg" name="o3pl-getRFID" promote="ComponentO3PL_MERP_ONL/o3pl-getRFID">
+    <sca:interface.wsdl xmi:id="_3YTQBpG8EeuRV-P2JIdBvg" interface="http://xmlns.example.com/20210329131528PLT#wsdl.interface(getRFID)" scaext:wsdlLocation="../Processes/com/fnf/eai/o3pl/merp/db/O3PL_MERP_ONL.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_3YTQB5G8EeuRV-P2JIdBvg" name="RestService115" path="/o3pl/getRFID" docBasePath="http://localhost:7777/EAI_RestType_O3PL" docResourcePath="O3PL_MERP_ONL" basePath="/" connector="com.fnf.eai.resources.http.server.eai.HTTPConnectorResource" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/com.fnf.eai.o3pl.merp.db.O3PL_MERP_ONL-O3PL_MERP_ONL.json" policySets="com.fnf.eai.resources.policy.BasicAuthentication" scaext:policySetLocations="BWRestHttpServiceBinding">
+      <operation xmi:id="_3aCVYJG8EeuRV-P2JIdBvg" operationName="post" nickname="post-getRFID" httpMethod="POST" notes="postO3PL_MERP_ONL" responseStyle="element" outputPartName="item">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <advancedConfig xmi:id="_3YTQCJG8EeuRV-P2JIdBvg" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_3aCVYZG8EeuRV-P2JIdBvg" bindingName="RestService115"/>
+  </sca:service>
+  <sca:service xmi:id="_6GDPspG8EeuRV-P2JIdBvg" name="o3pl-checkRFID" promote="ComponentO3PL_MERP_ONL/o3pl-checkRFID">
+    <sca:interface.wsdl xmi:id="_6GDPtpG8EeuRV-P2JIdBvg" interface="http://xmlns.example.com/20210329131528PLT#wsdl.interface(checkRFID)" scaext:wsdlLocation="../Processes/com/fnf/eai/o3pl/merp/db/O3PL_MERP_ONL.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_6GMZoJG8EeuRV-P2JIdBvg" name="RestService116" path="/o3pl/checkRFID" docBasePath="http://localhost:7777/EAI_RestType_O3PL" docResourcePath="O3PL_MERP_ONL" basePath="/" connector="com.fnf.eai.resources.http.server.eai.HTTPConnectorResource" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/com.fnf.eai.o3pl.merp.db.O3PL_MERP_ONL-O3PL_MERP_ONL.json" policySets="com.fnf.eai.resources.policy.BasicAuthentication" scaext:policySetLocations="BWRestHttpServiceBinding">
+      <operation xmi:id="_6H9UMJG8EeuRV-P2JIdBvg" operationName="post" nickname="post-checkRFID" httpMethod="POST" notes="postO3PL_MERP_ONL" responseStyle="element" outputPartName="item">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <advancedConfig xmi:id="_6GMZoZG8EeuRV-P2JIdBvg" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_6H9UMZG8EeuRV-P2JIdBvg" bindingName="RestService116"/>
+  </sca:service>
+  <sca:service xmi:id="_wv0YwpG_EeuRV-P2JIdBvg" name="o3pl-stockInfoOnline" promote="ComponentO3PL_OBO_ONLINE/o3pl-stockInfoOnline">
+    <sca:interface.wsdl xmi:id="_wv0YxpG_EeuRV-P2JIdBvg" interface="http://xmlns.example.com/20210331091125PLT#wsdl.interface(stockInfoOnline)" scaext:wsdlLocation="../Processes/com/fnf/eai/o3pl/obo/rest/O3PL_OBO_ONL.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_wv54UJG_EeuRV-P2JIdBvg" name="RestService118" path="/o3pl/stockInfoOnline" docBasePath="http://localhost:7777/EAI_RestType_O3PL" docResourcePath="O3PL_OBO_ONLINE" basePath="/" connector="com.fnf.eai.resources.http.server.eai.HTTPConnectorResource" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/com.fnf.eai.o3pl.obo.rest.O3PL_OBO_ONL-O3PL_OBO_ONLINE.json" policySets="com.fnf.eai.resources.policy.BasicAuthentication" scaext:policySetLocations="BWRestHttpServiceBinding">
+      <operation xmi:id="_wxrZ8JG_EeuRV-P2JIdBvg" operationName="post" nickname="post-stockInfoOnline" httpMethod="POST" notes="postO3PL_OBO_ONLINE" responseStyle="element" outputPartName="item">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <advancedConfig xmi:id="_wv54UZG_EeuRV-P2JIdBvg" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_wxrZ8ZG_EeuRV-P2JIdBvg" bindingName="RestService118"/>
+  </sca:service>
+  <sca:service xmi:id="_5b9pgpG_EeuRV-P2JIdBvg" name="o3pl-inboundDoneOnline" promote="ComponentO3PL_OBO_ONLINE/o3pl-inboundDoneOnline">
+    <sca:interface.wsdl xmi:id="_5b9phpG_EeuRV-P2JIdBvg" interface="http://xmlns.example.com/20210331091125PLT#wsdl.interface(inboundDoneOnline)" scaext:wsdlLocation="../Processes/com/fnf/eai/o3pl/obo/rest/O3PL_OBO_ONL.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_5cGzcJG_EeuRV-P2JIdBvg" name="RestService119" path="/o3pl/inboundDoneOnline" docBasePath="http://localhost:7777/EAI_RestType_O3PL" docResourcePath="O3PL_OBO_ONLINE" basePath="/" connector="com.fnf.eai.resources.http.server.eai.HTTPConnectorResource" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/com.fnf.eai.o3pl.obo.rest.O3PL_OBO_ONL-O3PL_OBO_ONLINE.json" policySets="com.fnf.eai.resources.policy.BasicAuthentication" scaext:policySetLocations="BWRestHttpServiceBinding">
+      <operation xmi:id="_5eAQ4JG_EeuRV-P2JIdBvg" operationName="post" nickname="post-inboundDoneOnline" httpMethod="POST" notes="postO3PL_OBO_ONLINE" responseStyle="element" outputPartName="item">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <advancedConfig xmi:id="_5cGzcZG_EeuRV-P2JIdBvg" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_5eAQ4ZG_EeuRV-P2JIdBvg" bindingName="RestService119"/>
+  </sca:service>
+  <sca:service xmi:id="_5ydogpHAEeuRV-P2JIdBvg" name="o3pl-cancelOutboundOnline" promote="ComponentOBO_O3PL_ONL/o3pl-cancelOutboundOnline">
+    <sca:interface.wsdl xmi:id="_5ydohpHAEeuRV-P2JIdBvg" interface="http://xmlns.example.com/20210329131112PLT#wsdl.interface(cancelOutboundOnline)" scaext:wsdlLocation="../Processes/com/fnf/eai/obo/o3pl/rest/OBO_O3PL_ONL.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_5ydoh5HAEeuRV-P2JIdBvg" name="RestService120" path="/o3pl/cancelOutboundOnline" docBasePath="http://localhost:7777/EAI_RestType_O3PL" docResourcePath="OBO_O3PL_ONL" basePath="/" connector="com.fnf.eai.resources.http.server.eai.HTTPConnectorResource" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/com.fnf.eai.obo.o3pl.rest.OBO_O3PL_ONL-OBO_O3PL_ONL.json" policySets="com.fnf.eai.resources.policy.BasicAuthentication" scaext:policySetLocations="BWRestHttpServiceBinding">
+      <operation xmi:id="_50V30JHAEeuRV-P2JIdBvg" operationName="post" nickname="post-cancelOutboundOnline" httpMethod="POST" notes="postOBO_O3PL_ONL" responseStyle="element" outputPartName="item">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <advancedConfig xmi:id="_5ydoiJHAEeuRV-P2JIdBvg" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_50awUJHAEeuRV-P2JIdBvg" bindingName="RestService120"/>
+  </sca:service>
+  <sca:service xmi:id="_83zo0pHAEeuRV-P2JIdBvg" name="o3pl-makeReturnOnline" promote="ComponentOBO_O3PL_ONL/o3pl-makeReturnOnline">
+    <sca:interface.wsdl xmi:id="_83zo1pHAEeuRV-P2JIdBvg" interface="http://xmlns.example.com/20210329131112PLT#wsdl.interface(makeReturnOnline)" scaext:wsdlLocation="../Processes/com/fnf/eai/obo/o3pl/rest/OBO_O3PL_ONL.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_835vcJHAEeuRV-P2JIdBvg" name="RestService121" path="/o3pl/makeReturnOnline" docBasePath="http://localhost:7777/EAI_RestType_O3PL" docResourcePath="OBO_O3PL_ONL" basePath="/" connector="com.fnf.eai.resources.http.server.eai.HTTPConnectorResource" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/com.fnf.eai.obo.o3pl.rest.OBO_O3PL_ONL-OBO_O3PL_ONL.json" policySets="com.fnf.eai.resources.policy.BasicAuthentication" scaext:policySetLocations="BWRestHttpServiceBinding">
+      <operation xmi:id="_851pIJHAEeuRV-P2JIdBvg" operationName="post" nickname="post-makeReturnOnline" httpMethod="POST" notes="postOBO_O3PL_ONL" responseStyle="element" outputPartName="item">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <advancedConfig xmi:id="_835vcZHAEeuRV-P2JIdBvg" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_851pIZHAEeuRV-P2JIdBvg" bindingName="RestService121"/>
+  </sca:service>
+  <sca:service xmi:id="_K6l_YJHHEeuezMB71T3MKg" name="o3pl-stresscheck" promote="Componenthealthcheck/o3pl-stresscheck">
+    <sca:interface.wsdl xmi:id="_K62eEJHHEeuezMB71T3MKg" interface="http://xmlns.example.com/20210216113212PLT#wsdl.interface(stresscheck)" scaext:wsdlLocation="../Processes/com/fnf/eai/common/healthcheck.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_K64TQJHHEeuezMB71T3MKg" name="RestService122" path="/o3pl/stresscheck" docBasePath="http://localhost:7777/EAI_RestType_O3PL" docResourcePath="healthcheck" basePath="/" connector="com.fnf.eai.resources.http.server.eai.HTTPConnectorResource" structuredData="true" technologyVersion="2.0" policySets="com.fnf.eai.resources.policy.BasicAuthentication" scaext:policySetLocations="BWRestHttpServiceBinding">
+      <operation xmi:id="_K80M8JHHEeuezMB71T3MKg" operationName="post" nickname="post-stresscheck" httpMethod="POST" notes="postHealthcheck" responseStyle="element" outputPartName="item">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <operation xmi:id="_GBD4AJeCEeux5rX4TEQ_ZQ" operationName="get" nickname="get-stresscheck" httpMethod="GET" notes="getHealthcheck" responseStyle="element">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <advancedConfig xmi:id="_K64TQZHHEeuezMB71T3MKg" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_K80M8ZHHEeuezMB71T3MKg" bindingName="RestService122"/>
+  </sca:service>
+  <sca:service xmi:id="_1zn0gpKpEeuezMB71T3MKg" name="o3pl-deliveryDoneOnline" promote="ComponentO3PL_OBO_ONLINE/o3pl-deliveryDoneOnline">
+    <sca:interface.wsdl xmi:id="_1zn0hpKpEeuezMB71T3MKg" interface="http://xmlns.example.com/20210331091125PLT#wsdl.interface(deliveryDoneOnline)" scaext:wsdlLocation="../Processes/com/fnf/eai/o3pl/obo/rest/O3PL_OBO_ONL.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_1zre4JKpEeuezMB71T3MKg" name="RestService123" path="/o3pl/deliveryDoneOnline" docBasePath="http://localhost:7777/EAI_RestType_O3PL" docResourcePath="O3PL_OBO_ONLINE" basePath="/" connector="com.fnf.eai.resources.http.server.eai.HTTPConnectorResource" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/com.fnf.eai.o3pl.obo.rest.O3PL_OBO_ONL-O3PL_OBO_ONLINE.json" policySets="com.fnf.eai.resources.policy.BasicAuthentication" scaext:policySetLocations="BWRestHttpServiceBinding">
+      <operation xmi:id="_11e1sJKpEeuezMB71T3MKg" operationName="post" nickname="post-deliveryDoneOnline" httpMethod="POST" notes="postO3PL_OBO_ONLINE" responseStyle="element" outputPartName="item">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <advancedConfig xmi:id="_1zre4ZKpEeuezMB71T3MKg" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_11e1sZKpEeuezMB71T3MKg" bindingName="RestService123"/>
+  </sca:service>
+  <sca:service xmi:id="_EvFHMpKqEeuezMB71T3MKg" name="o3pl-returnTrackingInfoOnline" promote="ComponentO3PL_OBO_ONLINE/o3pl-returnTrackingInfoOnline">
+    <sca:interface.wsdl xmi:id="_EvFuQpKqEeuezMB71T3MKg" interface="http://xmlns.example.com/20210331091125PLT#wsdl.interface(returnTrackingInfoOnline)" scaext:wsdlLocation="../Processes/com/fnf/eai/o3pl/obo/rest/O3PL_OBO_ONL.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_EvJ_sJKqEeuezMB71T3MKg" name="RestService124" path="/o3pl/returnTrackingInfoOnline" docBasePath="http://localhost:7777/EAI_RestType_O3PL" docResourcePath="O3PL_OBO_ONLINE" basePath="/" connector="com.fnf.eai.resources.http.server.eai.HTTPConnectorResource" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/com.fnf.eai.o3pl.obo.rest.O3PL_OBO_ONL-O3PL_OBO_ONLINE.json" policySets="com.fnf.eai.resources.policy.BasicAuthentication" scaext:policySetLocations="BWRestHttpServiceBinding">
+      <operation xmi:id="_Ew99kJKqEeuezMB71T3MKg" operationName="post" nickname="post-returnTrackingInfoOnline" httpMethod="POST" notes="postO3PL_OBO_ONLINE" responseStyle="element" outputPartName="item">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <advancedConfig xmi:id="_EvJ_sZKqEeuezMB71T3MKg" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_Ew99kZKqEeuezMB71T3MKg" bindingName="RestService124"/>
+  </sca:service>
+  <sca:service xmi:id="_32VBMpKrEeuezMB71T3MKg" name="o3pl-changeReceiverAddressOnline" promote="ComponentOBO_O3PL_ONL/o3pl-changeReceiverAddressOnline">
+    <sca:interface.wsdl xmi:id="_33YKEJKrEeuezMB71T3MKg" interface="http://xmlns.example.com/20210329131112PLT#wsdl.interface(changeReceiverAddressOnline)" scaext:wsdlLocation="../Processes/com/fnf/eai/obo/o3pl/rest/OBO_O3PL_ONL.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_33b0cJKrEeuezMB71T3MKg" name="RestService126" path="/o3pl/changeReceiverAddressOnline" docBasePath="http://localhost:7777/EAI_RestType_O3PL" docResourcePath="OBO_O3PL_ONL" basePath="/" connector="com.fnf.eai.resources.http.server.eai.HTTPConnectorResource" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/com.fnf.eai.obo.o3pl.rest.OBO_O3PL_ONL-OBO_O3PL_ONL.json" policySets="com.fnf.eai.resources.policy.BasicAuthentication" scaext:policySetLocations="BWRestHttpServiceBinding">
+      <operation xmi:id="_35TcsJKrEeuezMB71T3MKg" operationName="post" nickname="post-changeReceiverAddressOnline" httpMethod="POST" notes="postOBO_O3PL_ONL" responseStyle="element" outputPartName="item">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <advancedConfig xmi:id="_33b0cZKrEeuezMB71T3MKg" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_35TcsZKrEeuezMB71T3MKg" bindingName="RestService126"/>
+  </sca:service>
+  <sca:service xmi:id="_bBykMZK-EeuqYMEnOCAvjA" name="o3pl-stockInfoSabangnet" promote="ComponentO3PL_MERP_ONL/o3pl-stockInfoSabangnet">
+    <sca:interface.wsdl xmi:id="_bB548pK-EeuqYMEnOCAvjA" interface="http://xmlns.example.com/20210329131528PLT#wsdl.interface(stockInfoSabangnet1)" scaext:wsdlLocation="../Processes/com/fnf/eai/o3pl/merp/db/O3PL_MERP_ONL.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_bCMz4JK-EeuqYMEnOCAvjA" name="RestService117" path="/o3pl/stockInfoSabangnet" docBasePath="http://localhost:7777/EAI_RestType_O3PL" docResourcePath="O3PL_MERP_ONL" basePath="/" connector="com.fnf.eai.resources.http.server.eai.HTTPConnectorResource" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/com.fnf.eai.o3pl.merp.db.O3PL_MERP_ONL-O3PL_MERP_ONL.json" policySets="com.fnf.eai.resources.policy.BasicAuthentication" scaext:policySetLocations="BWRestHttpServiceBinding">
+      <operation xmi:id="_bDw6IJK-EeuqYMEnOCAvjA" operationName="post" nickname="post-stockInfoSabangnet" httpMethod="POST" notes="postO3PL_MERP_ONL" responseStyle="element" outputPartName="item">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <advancedConfig xmi:id="_bCMz4ZK-EeuqYMEnOCAvjA" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_bDw6IZK-EeuqYMEnOCAvjA" bindingName="RestService117"/>
+  </sca:service>
+  <sca:service xmi:id="_qvtsspwhEeuhuNcULp6IIw" name="o3pl-stockMove3PL" promote="ComponentMERP_O3PL_ONL/o3pl-stockMove3PL">
+    <sca:interface.wsdl xmi:id="_qv22oZwhEeuhuNcULp6IIw" interface="http://xmlns.example.com/20210413152957PLT#wsdl.interface(stockMove3PL)" scaext:wsdlLocation="../Processes/com/fnf/eai/merp/o3pl/rest/MERP_O3PL_ONL.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_qwESAJwhEeuhuNcULp6IIw" name="RestService16" path="/o3pl/stockMove3PL" docBasePath="http://localhost:7777/EAI_RestType_O3PL" docResourcePath="MERP_O3PL_ONL" basePath="/" connector="com.fnf.eai.resources.http.server.eai.HTTPConnectorResource" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/com.fnf.eai.merp.o3pl.rest.MERP_O3PL_ONL-MERP_O3PL_ONL.json" policySets="com.fnf.eai.resources.policy.BasicAuthentication" scaext:policySetLocations="BWRestHttpServiceBinding">
+      <operation xmi:id="_qyOOIJwhEeuhuNcULp6IIw" operationName="post" nickname="post-stockMove3PL" httpMethod="POST" notes="postMERP_O3PL_ONL" responseStyle="element" outputPartName="item">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <advancedConfig xmi:id="_qwESAZwhEeuhuNcULp6IIw" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_qyOOIZwhEeuhuNcULp6IIw" bindingName="RestService16"/>
+  </sca:service>
+  <sca:property xmi:id="_VyyrcGXqEeuhFpGsQLsBaA" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_Vy2V0GXqEeuhFpGsQLsBaA" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_Vy284GXqEeuhFpGsQLsBaA" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_Vy3j8GXqEeuhFpGsQLsBaA" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_Vy4LAGXqEeuhFpGsQLsBaA" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_Vy4yEGXqEeuhFpGsQLsBaA" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_Vy6AMGXqEeuhFpGsQLsBaA" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_Vy6nQGXqEeuhFpGsQLsBaA" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_Vy7OUGXqEeuhFpGsQLsBaA" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_C04agGXrEeuhFpGsQLsBaA" name="/COMMON/LOG_LEVEL" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_FsSsgGXrEeuhFpGsQLsBaA" name="/COMMON/ENV" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_C5OvAGXrEeuhFpGsQLsBaA" name="/DB_INFO/MAX_ROW" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_GrsUAGXrEeuhFpGsQLsBaA" name="/DB_INFO/SUBSET_SIZE" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_GvM7AGXrEeuhFpGsQLsBaA" name="/DB_INFO/TIME_OUT" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_Ifz9AGXrEeuhFpGsQLsBaA" name="/EAI_INFO/JMS/URL" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_JhSoIGXrEeuhFpGsQLsBaA" name="/EAI_INFO/JMS/USERNAME" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_JlZFAGXrEeuhFpGsQLsBaA" name="/EAI_INFO/JMS/PASSWORD" type="property:password" scaext:simpleValue="#!pzvm8m5XnBvLJSRNWm2erQ==" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_Ktt_AGXrEeuhFpGsQLsBaA" name="/EAI_INFO/HTTP/PORT/HTTP_PORT1" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_KxJtgGXrEeuhFpGsQLsBaA" name="/EAI_INFO/HTTP/CONFIG/QTP_MIN" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_t3x5AGXrEeuhFpGsQLsBaA" name="/EAI_INFO/HTTP/CONFIG/QTP_MAX" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_55-E8GdeEeuNbfmxgUmihw" name="/EAI_INFO/HTTP/CONFIG/hostname1" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_6Maf0GdeEeuNbfmxgUmihw" name="/EAI_INFO/HTTP/CONFIG/hostname2" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_DBxnAGXrEeuhFpGsQLsBaA" name="/MERP_INFO/username" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_NC0OIGXrEeuhFpGsQLsBaA" name="/MERP_INFO/password" type="property:password" scaext:simpleValue="#!2ekWoTZYVYfJsGuTOcwk6g==" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_NGDvYGXrEeuhFpGsQLsBaA" name="/MERP_INFO/url" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_NGmh8GXrEeuhFpGsQLsBaA" name="/MERP_INFO/hostname" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_x3VVYJK6EeuezMB71T3MKg" name="/MERP_INFO/maxconnection" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_YnRqQIL_EeuQS_KwSDmCIQ" name="/OBO_INFO/hostname" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_07GU4JwcEeuhuNcULp6IIw" name="/OBO_INFO/HTTP/authorization" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_GdTnYJwdEeuhuNcULp6IIw" name="/OBO_INFO/HTTP/password" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_5drIMJwcEeuhuNcULp6IIw" name="/OBO_INFO/HTTP/port" type="XMLSchema:int" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_e_GygJBGEeuKnK9Z6LFaEQ" name="/O3PL_INFO/hostname" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_GtOrAJwjEeuhuNcULp6IIw" name="/O3PL_INFO/HTTP/Authorization" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_KdR1MJwjEeuhuNcULp6IIw" name="/O3PL_INFO/HTTP/password" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_Hw0u8KvaEeuDfvkSCvcTXA" name="/O3PL_INFO/HTTP/port" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:component xmi:id="_LSmmYG__EeuTIrd96tX6Vg" name="Componenthealthcheck" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_LSmmYW__EeuTIrd96tX6Vg" processName="com.fnf.eai.common.healthcheck"/>
+    <sca:service xmi:id="_LSppsG__EeuTIrd96tX6Vg" name="o3pl-healthcheck">
+      <sca:interface.wsdl xmi:id="_LSvJQG__EeuTIrd96tX6Vg" interface="http://xmlns.example.com/20210216113212PLT#wsdl.interface(healthcheck)" scaext:wsdlLocation="../Processes/com/fnf/eai/common/healthcheck.bwp"/>
+    </sca:service>
+    <sca:service xmi:id="_K6kxQJHHEeuezMB71T3MKg" name="o3pl-stresscheck">
+      <sca:interface.wsdl xmi:id="_K6lYUJHHEeuezMB71T3MKg" interface="http://xmlns.example.com/20210216113212PLT#wsdl.interface(stresscheck)"/>
+    </sca:service>
+  </sca:component>
+  <sca:component xmi:id="_zKGXEJBEEeuKnK9Z6LFaEQ" name="ComponentOBO_O3PL_ONL" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_zKGXEZBEEeuKnK9Z6LFaEQ" processName="com.fnf.eai.obo.o3pl.rest.OBO_O3PL_ONL"/>
+    <sca:service xmi:id="_zKG-IJBEEeuKnK9Z6LFaEQ" name="o3pl-makeOutboundOnline">
+      <sca:interface.wsdl xmi:id="_zKG-IZBEEeuKnK9Z6LFaEQ" interface="http://xmlns.example.com/20210329131112PLT#wsdl.interface(makeOutboundOnline)" scaext:wsdlLocation="../Processes/com/fnf/eai/obo/o3pl/rest/OBO_O3PL_ONL.bwp"/>
+    </sca:service>
+    <sca:service xmi:id="_5ydogJHAEeuRV-P2JIdBvg" name="o3pl-cancelOutboundOnline">
+      <sca:interface.wsdl xmi:id="_5ydogZHAEeuRV-P2JIdBvg" interface="http://xmlns.example.com/20210329131112PLT#wsdl.interface(cancelOutboundOnline)"/>
+    </sca:service>
+    <sca:service xmi:id="_83zo0JHAEeuRV-P2JIdBvg" name="o3pl-makeReturnOnline">
+      <sca:interface.wsdl xmi:id="_83zo0ZHAEeuRV-P2JIdBvg" interface="http://xmlns.example.com/20210329131112PLT#wsdl.interface(makeReturnOnline)"/>
+    </sca:service>
+    <sca:service xmi:id="_32VBMJKrEeuezMB71T3MKg" name="o3pl-changeReceiverAddressOnline">
+      <sca:interface.wsdl xmi:id="_32VBMZKrEeuezMB71T3MKg" interface="http://xmlns.example.com/20210329131112PLT#wsdl.interface(changeReceiverAddressOnline)"/>
+    </sca:service>
+  </sca:component>
+  <sca:component xmi:id="_ZUG0AJBFEeuKnK9Z6LFaEQ" name="ComponentO3PL_MERP_ONL" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_ZUG0AZBFEeuKnK9Z6LFaEQ" processName="com.fnf.eai.o3pl.merp.db.O3PL_MERP_ONL"/>
+    <sca:service xmi:id="_ZUHbEJBFEeuKnK9Z6LFaEQ" name="o3pl-getWmsOutRFID">
+      <sca:interface.wsdl xmi:id="_ZUHbEZBFEeuKnK9Z6LFaEQ" interface="http://xmlns.example.com/20210329131528PLT#wsdl.interface(getWmsOutRFID)" scaext:wsdlLocation="../Processes/com/fnf/eai/o3pl/merp/db/O3PL_MERP_ONL.bwp"/>
+    </sca:service>
+    <sca:service xmi:id="_y9JTUJG8EeuRV-P2JIdBvg" name="o3pl-outboundDoneInside">
+      <sca:interface.wsdl xmi:id="_y9JTUZG8EeuRV-P2JIdBvg" interface="http://xmlns.example.com/20210329131528PLT#wsdl.interface(outboundDoneInside)"/>
+    </sca:service>
+    <sca:service xmi:id="_3YTQAJG8EeuRV-P2JIdBvg" name="o3pl-getRFID">
+      <sca:interface.wsdl xmi:id="_3YTQAZG8EeuRV-P2JIdBvg" interface="http://xmlns.example.com/20210329131528PLT#wsdl.interface(getRFID)"/>
+    </sca:service>
+    <sca:service xmi:id="_6GDPsJG8EeuRV-P2JIdBvg" name="o3pl-checkRFID">
+      <sca:interface.wsdl xmi:id="_6GDPsZG8EeuRV-P2JIdBvg" interface="http://xmlns.example.com/20210329131528PLT#wsdl.interface(checkRFID)"/>
+    </sca:service>
+    <sca:service xmi:id="_bBtEoJK-EeuqYMEnOCAvjA" name="o3pl-stockInfoSabangnet">
+      <sca:interface.wsdl xmi:id="_bBykMJK-EeuqYMEnOCAvjA" interface="http://xmlns.example.com/20210329131528PLT#wsdl.interface(stockInfoSabangnet1)" scaext:wsdlLocation="../Processes/com/fnf/eai/o3pl/merp/db/O3PL_MERP_ONL.bwp"/>
+    </sca:service>
+  </sca:component>
+  <sca:component xmi:id="_oh45kJG1EeuezMB71T3MKg" name="ComponentO3PL_OBO_ONLINE" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_oh45kZG1EeuezMB71T3MKg" processName="com.fnf.eai.o3pl.obo.rest.O3PL_OBO_ONL"/>
+    <sca:service xmi:id="_oiNCoJG1EeuezMB71T3MKg" name="o3pl-outboundDoneOnline">
+      <sca:interface.wsdl xmi:id="_oiU-cJG1EeuezMB71T3MKg" interface="http://xmlns.example.com/20210331091125PLT#wsdl.interface(outboundDoneOnline)" scaext:wsdlLocation="../Processes/com/fnf/eai/o3pl/obo/rest/O3PL_OBO_ONLINE.bwp"/>
+    </sca:service>
+    <sca:service xmi:id="_wv0YwJG_EeuRV-P2JIdBvg" name="o3pl-stockInfoOnline">
+      <sca:interface.wsdl xmi:id="_wv0YwZG_EeuRV-P2JIdBvg" interface="http://xmlns.example.com/20210331091125PLT#wsdl.interface(stockInfoOnline)"/>
+    </sca:service>
+    <sca:service xmi:id="_5b9pgJG_EeuRV-P2JIdBvg" name="o3pl-inboundDoneOnline">
+      <sca:interface.wsdl xmi:id="_5b9pgZG_EeuRV-P2JIdBvg" interface="http://xmlns.example.com/20210331091125PLT#wsdl.interface(inboundDoneOnline)"/>
+    </sca:service>
+    <sca:service xmi:id="_1zn0gJKpEeuezMB71T3MKg" name="o3pl-deliveryDoneOnline">
+      <sca:interface.wsdl xmi:id="_1zn0gZKpEeuezMB71T3MKg" interface="http://xmlns.example.com/20210331091125PLT#wsdl.interface(deliveryDoneOnline)"/>
+    </sca:service>
+    <sca:service xmi:id="_EvFHMJKqEeuezMB71T3MKg" name="o3pl-returnTrackingInfoOnline">
+      <sca:interface.wsdl xmi:id="_EvFHMZKqEeuezMB71T3MKg" interface="http://xmlns.example.com/20210331091125PLT#wsdl.interface(returnTrackingInfoOnline)"/>
+    </sca:service>
+  </sca:component>
+  <sca:component xmi:id="_qvkiwJwhEeuhuNcULp6IIw" name="ComponentMERP_O3PL_ONL" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_qvkiwZwhEeuhuNcULp6IIw" processName="com.fnf.eai.merp.o3pl.rest.MERP_O3PL_ONL"/>
+    <sca:service xmi:id="_qvtssJwhEeuhuNcULp6IIw" name="o3pl-stockMove3PL">
+      <sca:interface.wsdl xmi:id="_qvtssZwhEeuhuNcULp6IIw" interface="http://xmlns.example.com/20210413152957PLT#wsdl.interface(stockMove3PL)" scaext:wsdlLocation="../Processes/com/fnf/eai/merp/o3pl/rest/MERP_O3PL_ONL.bwp"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>
