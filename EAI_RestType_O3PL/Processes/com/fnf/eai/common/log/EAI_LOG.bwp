@@ -968,6 +968,43 @@
                                     x="291"
                                     xsi:type="notation:Bounds" y="9"/>
                                     </children>
+                                    <children type="4002 bw.generalactivities.log">
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.8"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.8"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.8"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.8"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.8"/>
+                                    <layoutConstraint
+                                    height="40" width="40"
+                                    x="292"
+                                    xsi:type="notation:Bounds" y="172"/>
+                                    </children>
                                     <styles xsi:type="notation:DrawerStyle"/>
                                     <styles xsi:type="notation:SortingStyle"/>
                                     <styles xsi:type="notation:FilteringStyle"/>
@@ -1027,7 +1064,7 @@
         </edges>
         <edges
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.3"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1" type="4006">
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.8" type="4006">
             <children type="6002">
                 <layoutConstraint x="39" xsi:type="notation:Location" y="-12"/>
             </children>
@@ -1140,6 +1177,17 @@
             <bendpoints
                 points="[25, 22, -154, -141]$[155, 141, -24, -22]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.8"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.11"/>
+            <bendpoints points="[25, 0, -153, 0]$[154, 0, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
     </notation:Diagram>
     <tibex:NamespaceRegistry enabled="true">
         <tibex:namespaceItem
@@ -1183,6 +1231,7 @@
             tibex:propertySource="/COMMON/ENV" type="xsd:string"/>
         <bpws:variable element="ns1:ActivityInput" name="ErrLog-input" sca-bpel:internal="true"/>
         <bpws:variable element="ns1:ActivityInput" name="TraceLog-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns1:ActivityInput" name="DebugLog-input" sca-bpel:internal="true"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -1196,7 +1245,7 @@
         <bpws:flow name="flow">
             <bpws:links>
                 <bpws:link name="StartToJMSSendMessage" tibex:linkType="SUCCESS"/>
-                <bpws:link name="EmptyToEnd" tibex:label="DEBUG" tibex:linkType="SUCCESSWITHCONDITION"/>
+                <bpws:link name="EmptyToDebugLog" tibex:label="DEBUG" tibex:linkType="SUCCESSWITHCONDITION"/>
                 <bpws:link name="JMSSendMessageToEmpty" tibex:linkType="SUCCESS"/>
                 <bpws:link name="EmptyToInfoLog" tibex:label="INFO" tibex:linkType="SUCCESSWITHCONDITION"/>
                 <bpws:link name="EmptyToErrLog_ERROR"
@@ -1209,6 +1258,7 @@
                 <bpws:link name="EmptyToTraceLog_TRACE"
                     tibex:label="TRACE" tibex:linkType="SUCCESSWITHCONDITION"/>
                 <bpws:link name="TraceLogToEnd" tibex:linkType="SUCCESS"/>
+                <bpws:link name="DebugLogToEnd" tibex:linkType="SUCCESS"/>
             </bpws:links>
             <bpws:extensionActivity>
                 <tibex:receiveEvent createInstance="yes"
@@ -1231,7 +1281,7 @@
                         <bpws:target linkName="ErrLogToEnd"/>
                         <bpws:target linkName="NoDatasToEnd"/>
                         <bpws:target linkName="TraceLogToEnd"/>
-                        <bpws:target linkName="EmptyToEnd"/>
+                        <bpws:target linkName="DebugLogToEnd"/>
                     </bpws:targets>
                     <tibex:config>
                         <bwext:BWActivity
@@ -1287,7 +1337,7 @@
                     <bpws:target linkName="JMSSendMessageToEmpty"/>
                 </bpws:targets>
                 <bpws:sources>
-                    <bpws:source linkName="EmptyToEnd">
+                    <bpws:source linkName="EmptyToDebugLog">
                         <tibex:DesignExpression>
                             <tibex:expression
                                 expression="$Start/ns0:TxInfo/DEBUG='DEBUG'" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
@@ -1429,6 +1479,39 @@
                                     <type href="http://ns.tibco.com/bw/palette/generalactivities#//Log"/>
                                     <value controlBy="Application"
                                     role="Info"
+                                    suppressJobInfo="true" xsi:type="generalactivities:Log"/>
+                                </properties>
+                            </activityConfig>
+                        </bwext:BWActivity>
+                    </tibex:config>
+                </tibex:activityExtension>
+            </bpws:extensionActivity>
+            <bpws:extensionActivity>
+                <tibex:activityExtension inputVariable="DebugLog-input"
+                    name="DebugLog"
+                    tibex:xpdlId="fb502eb2-bc58-4862-b799-8d6f263b3d54" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    <bpws:targets>
+                        <bpws:target linkName="EmptyToDebugLog"/>
+                    </bpws:targets>
+                    <bpws:sources>
+                        <bpws:source linkName="DebugLogToEnd"/>
+                    </bpws:sources>
+                    <tibex:inputBindings>
+                        <tibex:inputBinding
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.tibco.com/pe/WriteToLogActivitySchema&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:template name=&quot;DebugLog-input&quot; match=&quot;/&quot;>&lt;tns:ActivityInput>&lt;message>&lt;xsl:value-of select=&quot;$Start&quot;/>&lt;/message>&lt;/tns:ActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                    </tibex:inputBindings>
+                    <tibex:config>
+                        <bwext:BWActivity
+                            activityTypeID="bw.generalactivities.log"
+                            version="6.0.0.001"
+                            xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
+                            xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
+                            xmlns:generalactivities="http://ns.tibco.com/bw/palette/generalactivities" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                            <activityConfig>
+                                <properties name="config" xsi:type="activityconfig:EMFProperty">
+                                    <type href="http://ns.tibco.com/bw/palette/generalactivities#//Log"/>
+                                    <value controlBy="Application"
+                                    role="Debug"
                                     suppressJobInfo="true" xsi:type="generalactivities:Log"/>
                                 </properties>
                             </activityConfig>
